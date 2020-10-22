@@ -56,10 +56,12 @@ class checkState extends State<check> {
               children: [
                 if (cierto)
                   Icon(Icons.check_circle,
-                      size: 200)
+                      size: 200,
+                      color: Colors.green)
                 else
                   Icon(Icons.error,
-                      size: 200)
+                      size: 200,
+                      color: Colors.red)
               ]
           ),
 
@@ -73,8 +75,13 @@ class checkState extends State<check> {
 
           Row( mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(child:
-              TextField(
+              Container(
+                width: 370,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.white10,
+                ),child:
+                TextField(
                 controller: _controller,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
